@@ -127,6 +127,5 @@ a:active {
 }
 .container {
 	width: 960px;
-	margin-left: 5;
-	margin-right: 5;
+	margin: 0 5;
 }
