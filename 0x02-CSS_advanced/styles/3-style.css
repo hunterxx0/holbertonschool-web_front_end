@@ -12,7 +12,6 @@ html {
 body a {
 	color: var(--text-color);
 }
-}
 .visually-hidden {
 	display: none;
 }
