@@ -43,10 +43,15 @@ a:link {
 	text-decoration: none;
 	color: var(--text-color);
 }
-a:visted {
+a:visited {
 	font-style: italic;
 }
-
+a:hover {
+	text-decoration: underline;
+}
+a:active {
+	background-color: var(--color-light-grey);
+}  
 .visually-hidden {
 	display: none;
 }
