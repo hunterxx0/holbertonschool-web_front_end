@@ -39,7 +39,6 @@ body {
 	font-weight: var(--font-weight-regular);
 	line-height: var(--line-height-base);
 }
-
 a:link {
 	text-decoration: none;
 	color: var(--text-color);
@@ -47,6 +46,7 @@ a:link {
 a:visted {
 	font-style: italic;
 }
+
 .visually-hidden {
 	display: none;
 }
