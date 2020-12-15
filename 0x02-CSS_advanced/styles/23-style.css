@@ -207,7 +207,7 @@ a:active {
 .social-link {
 	display: block;
 }
-.social-link svg {
+svg .social-link {
 	fill: var(--text-color);
 }
 .footer {
