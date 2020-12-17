@@ -1,0 +1,8 @@
+/* My style */
+$fav_color: #3D3D3D;
+$red_color: #FF0000;
+body {
+    color: #3D3D3D;
+    body > .red {
+        color: #FF0000; }
+}
