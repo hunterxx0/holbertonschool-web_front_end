@@ -1,0 +1,13 @@
+/* My style */
+$fav_color: #3D3D3D;
+$sec_color: #6D6D6D;
+body {
+	color: $fav_color;
+	background-color: $sec_color;
+ }
+p {
+	color: $fav_color;
+}
+h2 {
+	background-color: $sec_color;
+}
