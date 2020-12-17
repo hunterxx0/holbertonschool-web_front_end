@@ -1,0 +1,10 @@
+/* My style */
+@forward "10-colors" as col-*;
+.red {
+  color: $col-red; }
+
+.green {
+  color: $col-green; }
+
+.blue {
+  color: $col-blue; }
