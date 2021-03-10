@@ -703,7 +703,7 @@ input[type="text"]:focus, input[type="email"]:focus, textarea:focus {
 /* Form group
 ============================= */
 .form-group {
-  padding-right: 1rem;
+  padding: 1rem;
   margin: 0;
   background-color: var(--color-white);
 }
