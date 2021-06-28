@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+    <head>
+
+        <meta charset="utf-8" />
+        <title>Task 4</title>
+        <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js" integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous">
+        </script>
+    </head>
+
+    <body>
+        <script type="application/javascript">
+            function createFamilyTree() {
+                $( "body" ).append( "<table>",
+                    "<thead>",
+                    "<tr><th>Firstname</th><th>Lastname</th></tr>",
+                    "</thead>",
+                    "<tbody>",
+                    "<tr><td id=\"first\">Guillaume</td><td id=\"last\">Salva</td></tr>",
+                    "<tr id=\"empty\"><td>Paulette</td><td>Salva</td></tr>",
+                    "<tr id=\"empty2\"><td>Antoine</td><td>Salva</td></tr>",
+                    "</tbody>",
+                    "</table>" );
+            }
+            function replaceFamilyTree() {
+                $('#empty').empty();
+                $('#empty2').empty();
+                $('#first').replaceWith("<td id=\"first\">Gerard</td>");
+                $('#last').replaceWith("<td id=\"last\">Bonissa</td>");
+            }
+            createFamilyTree();
+            replaceFamilyTree();
+        </script>
+    </body>
+
+</html>
