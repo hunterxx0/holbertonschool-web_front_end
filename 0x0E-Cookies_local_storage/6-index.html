@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+    <head>
+        <meta charset="utf-8" />
+        <title>Task 6</title>
+        <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js" integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous">
+        </script>
+        <script src="https://cdn.jsdelivr.net/npm/js-cookie@rc/dist/js.cookie.min.js"></script>
+    </head>
+    <body>
+        <script type="text/javascript">
+            var availableItems = ["Shampoo", "Soap", "Sponge", "Water"];
+            function lsTest(){
+                var test = 'test';
+                try {
+                    localStorage.setItem(test, test);
+                    localStorage.removeItem(test);
+                    return true;
+                } catch(e) {
+                    return false;
+                }
+            }
+            function addItemToCart(item) {
+                sessionStorage.setItem(item, true);
+            }
+            function createStore() {
+                var ul = document.createElement('ul');
+                for (var i = 0; i < availableItems.length; i++){
+                    var li = document.createElement('li');
+                    li.setAttribute("onclick", "addItemToCart('" + availableItems[i] + "')");
+                    li.appendChild(document.createTextNode(availableItems[i]));
+                    ul.appendChild(li);
+                }
+                document.body.appendChild(ul);
+            }
+            function displayCart() {
+                let items = Object.keys(sessionStorage).length;
+                if ( items ) {
+                    var p = document.createElement('p');
+                    p.innerHTML = "You previously had " + items + " items in your cart";
+                    document.body.appendChild(p);
+                }
+            }
+            if(lsTest() === true){
+                createStore();
+                displayCart();
+            } else {
+                alert("Sorry, your browser does not support Web storage. Try again with a better one");
+            }
+        </script>
+    </body>
+</html>

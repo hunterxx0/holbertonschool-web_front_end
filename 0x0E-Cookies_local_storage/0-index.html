@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+    <head>
+
+        <meta charset="utf-8" />
+        <title>Task 0</title>
+        <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js" integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous">
+        </script>
+    </head>
+
+    <body>
+        <h1>Login to the website</h1>
+        <input type="text" placeholder="Firstname" id="firstname">
+        <input type="text" placeholder="Email" id="email">
+        <button onclick="setCookies()">Log me in</button>
+        <h1>Cookies</h1>
+        <button onclick="showCookies()">Show the cookies</button>
+        <script type="text/javascript">
+            function setCookies() {
+                document.cookie = "firstname=" + document.getElementById("firstname").value;
+                document.cookie = "email=" + document.getElementById("email").value
+            }
+            function showCookies() {
+                var para = document.createElement('p');
+                para.innerHTML = "Cookies: " + document.cookie.split(';')[0].split("=")[1] + ", " + document.cookie.split(';')[1].split("=")[1] ;
+                document.body.appendChild(para);
+            }
+        </script>
+    </body>
+
+</html>
